@@ -1,0 +1,672 @@
+void raideA(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+2*p/7, x+3*p/7, x+4*p/7, x+5*p/7, x+p, x+2*p/7, x+5*p/7, x+3*p/7, x+3*p/7, x+4*p/7, x+4*p/7, x+p/2, x+2*p/7, x+5*p/7, x+3*p/7, x+4*p/7};  
+	int ys[] = {y, y, y, y, y, y, y-4*a/5, y-4*a/5, y-3*a/5, y-2*a/5, y-2*a/5, y-3*a/5, y-a, y-a/5, y-a/5, y-4*a/5, y-4*a/5};
+
+	trikampis(pav, xs[0], ys[0], xs[1], ys[1], xs[13], ys[13], r, g, b);
+	trikampis(pav, xs[1], ys[1], xs[6], ys[6], xs[15], ys[15], r, g, b);
+	trikampis(pav, xs[1], ys[1], xs[2], ys[2], xs[15], ys[15], r, g, b);
+	trikampis(pav, xs[6], ys[6], xs[7], ys[7], xs[12], ys[12], r, g, b);
+	trikampis(pav, xs[8], ys[8], xs[9], ys[9], xs[11], ys[11], r, g, b);
+	trikampis(pav, xs[9], ys[9], xs[10], ys[10], xs[11], ys[11], r, g, b);
+	trikampis(pav, xs[3], ys[3], xs[4], ys[4], xs[16], ys[16], r, g, b);
+	trikampis(pav, xs[4], ys[4], xs[7], ys[7], xs[16], ys[16], r, g, b);
+	trikampis(pav, xs[4], ys[4], xs[5], ys[5], xs[14], ys[14], r, g, b);
+
+
+}
+////////////////////
+void raideB(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/5, x+p*2/5, x+p*3/5, x+p*4/5, x+p};
+    int ys[] = {y, y+a/6, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a}; 
+
+    trikampis(pav, xs[0], ys[1], xs[1], ys[1], xs[1], ys[0], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[1], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[1], ys[6], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[3], ys[0], xs[2], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[0], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[2], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[2], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[2], xs[2], ys[4], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[3], ys[2], xs[2], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[4], ys[3], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[4], xs[4], ys[3], xs[5], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[5], ys[4], xs[5], ys[5], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[5], ys[5], xs[4], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[5], xs[4], ys[5], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[6], xs[4], ys[5], xs[4], ys[6], r, g, b);
+    trikampis(pav, xs[3], ys[5], xs[4], ys[5], xs[4], ys[4], r, g, b);
+}
+/////////////////
+void raideC(struct PPM6* pav,  int x, int y,                    // k.v. kampas
+                 int p, int a, uint8_t r, uint8_t g, uint8_t b){
+
+
+
+       int xs[] = {x, x+p/5, x+p*2/5, x+p*3/5, x+p*4/5, x+p};
+    int ys[] = {y, y+a/7, y+2*a/7, y+3*a/7, y+4*a/7, y+5*a/7, y+6*a/7, y+a};
+
+    trikampis(pav, xs[0], ys[2], xs[0], ys[5], xs[1], ys[6], r, g, b);
+    trikampis(pav, xs[1], ys[6], xs[1], ys[1], xs[0], ys[2], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[1], ys[2], xs[2], ys[0], r, g, b);
+    trikampis(pav, xs[1], ys[2], xs[2], ys[1], xs[2], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[1], xs[4], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[4], ys[0], xs[5], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[1], xs[5], ys[1], xs[5], ys[2], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[1], ys[6], xs[2], ys[7], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[2], ys[7], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[6], xs[2], ys[7], xs[4], ys[7], r, g, b);
+    trikampis(pav, xs[2], ys[6], xs[4], ys[7], xs[5], ys[6], r, g, b);
+    trikampis(pav, xs[4], ys[6], xs[5], ys[6], xs[5], ys[5], r, g, b);
+
+
+
+}
+////////////////////
+void raideD(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+2*p/3, x+p, x+2*p/3, x, x+p/6, x+3*p/6, x+p/6};  
+	int ys[] = {y, y+a/6, y+a/2, y+5*a/6, y+a, y+2*a/6, y+a/2, y+4*a/6};
+
+	trikampis(pav, xs[0], ys[0], xs[5], ys[5], xs[1], ys[1], r, g, b);
+	trikampis(pav, xs[5], ys[5], xs[1], ys[1], xs[6], ys[6], r, g, b);
+	trikampis(pav, xs[1], ys[1], xs[6], ys[6], xs[2], ys[2], r, g, b);
+	trikampis(pav, xs[2], ys[2], xs[6], ys[6], xs[3], ys[3], r, g, b);
+	trikampis(pav, xs[3], ys[3], xs[6], ys[6], xs[7], ys[7], r, g, b);
+	trikampis(pav, xs[3], ys[3], xs[7], ys[7], xs[4], ys[4], r, g, b);
+	trikampis(pav, xs[4], ys[4], xs[5], ys[5], xs[7], ys[7], r, g, b);
+	trikampis(pav, xs[0], ys[0], xs[4], ys[4], xs[5], ys[5], r, g, b);
+
+
+}
+////////////////////
+void raideE(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	 int xs[] = {x,x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a}; 
+
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[0], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[0], ys[5], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[3], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[3], ys[0], xs[2], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[2], xs[2], ys[3], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[3], ys[5], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[2], ys[4], xs[3], ys[5], r, g, b); 
+}
+//////////////////
+void raideF(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+    int xs[] = {x, x+p/4, x+2*p/4, x+3*p/4, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[0], ys[5], xs[1], ys[5], xs[1], ys[4], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[2], ys[5], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[2], ys[1], xs[2], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[1], ys[1], xs[3], ys[0], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[3], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[0], xs[3], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[2], ys[3], xs[3], ys[2], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[3], ys[2], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[2], xs[3], ys[3], xs[4], ys[2], r, g, b);
+}
+//////////////////////
+void raideG(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+3*p/4, x+p, x+3*p/4, x+p/4, x+p/4, x+3*p/4, x+3*p/4, x+p/2, x+p/2, x+3*p/4, x+p, x+p, x+3*p/4, x+p/4, x, x};  
+	int ys[] = {y, y, y+2*a/6, y+a/6, y+a/6, y+5*a/6, y+5*a/6, y+4*a/6, y+4*a/6, y+a/2, y+a/2, y+a/2, y+a, y+a, y+a, y+a, y+a/6};
+
+	trikampis(pav, xs[0], ys[0], xs[1], ys[1], xs[16], ys[16], r, g, b);
+	trikampis(pav, xs[16], ys[16], xs[1], ys[1], xs[3], ys[3], r, g, b);
+	trikampis(pav, xs[1], ys[1], xs[2], ys[2], xs[3], ys[3], r, g, b);
+	trikampis(pav, xs[15], ys[15], xs[16], ys[16], xs[14], ys[14], r, g, b);
+	trikampis(pav, xs[4], ys[4], xs[16], ys[16], xs[14], ys[14], r, g, b);
+	trikampis(pav, xs[5], ys[5], xs[6], ys[6], xs[14], ys[14], r, g, b);
+	trikampis(pav, xs[13], ys[13], xs[6], ys[6], xs[14], ys[14], r, g, b);
+	trikampis(pav, xs[13], ys[13], xs[12], ys[12], xs[10], ys[10], r, g, b);
+	trikampis(pav, xs[12], ys[12], xs[11], ys[11], xs[10], ys[10], r, g, b);
+	trikampis(pav, xs[9], ys[9], xs[7], ys[7], xs[10], ys[10], r, g, b);
+	trikampis(pav, xs[8], ys[8], xs[9], ys[9], xs[7], ys[7], r, g, b);
+
+}
+///////////////////
+void raideH(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/5, x+2*p/5, x+3*p/5, x+4*p/5, x+p};
+    int ys[] = {y, y+a/3, y+2*a/3, y+a}; 
+
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[3], xs[1], ys[3], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[1], ys[3], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[1], xs[3], ys[2], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[2], ys[2], xs[3], ys[2], r, g, b);
+    trikampis(pav, xs[3], ys[0], xs[4], ys[0], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[4], ys[0], xs[3], ys[3], xs[4], ys[3], r, g, b);
+    trikampis(pav, xs[4], ys[0], xs[5], ys[0], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[3], xs[5], ys[3], xs[4], ys[2], r, g, b);
+
+}
+/////////////////
+void raideI(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x,x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a}; 
+
+    trikampis(pav, xs[0], ys[0], xs[3], ys[0], xs[0], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[3], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[2], ys[1], xs[1], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[1], ys[4], xs[2], ys[4], r, g, b);
+    trikampis(pav, xs[0], ys[4], xs[3], ys[4], xs[0], ys[5], r, g, b);
+    trikampis(pav, xs[0], ys[5], xs[3], ys[4], xs[3], ys[5], r, g, b);
+
+}
+///////////////////
+void raideJ(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/5, x+p*2/5, x+p*3/5, x+p*4/5, x+p};
+    int ys[] = {y, y+a/6, y+a*2/6, y+a*3/6, y+a*4/6, y+a*5/6, y+a};
+
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[1], ys[1], xs[5], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[5], ys[0], xs[5], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[1], xs[4], ys[2], xs[5], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[2], xs[5], ys[2], xs[5], ys[1], r, g, b);
+    trikampis(pav, xs[4], ys[2], xs[5], ys[2], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[5], ys[4], xs[5], ys[2], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[5], ys[4], xs[4], ys[6], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[3], ys[5], xs[4], ys[6], r, g, b);
+    trikampis(pav, xs[3], ys[5], xs[1], ys[6], xs[4], ys[6], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[5], ys[4], xs[1], ys[6], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[1], ys[5], xs[2], ys[5], r, g, b);
+    
+}
+//////////////////
+void raideK(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/5, x+2*p/5, x+3*p/5, x+4*p/5, x+p};
+    int ys[] = {y, y+a/6, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[6], xs[1], ys[6], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[1], ys[6], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[3], ys[0], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[2], ys[3], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[2], ys[4], xs[3], ys[6], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[3], ys[6], xs[4], ys[5], r, g, b);
+    trikampis(pav, xs[5], ys[6], xs[3], ys[6], xs[4], ys[5], r, g, b);
+    trikampis(pav, xs[3], ys[0], xs[5], ys[0], xs[4], ys[1], r, g, b);
+    
+}
+/////////////
+void raideL(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+  int xs[] = {x, x+p/5, x+2*p/5, x+3*p/5, x+4*p/5, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[0], ys[2], xs[1], ys[1], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[1], ys[1], xs[2], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[1], ys[1], xs[2], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[1], ys[1], xs[2], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[4], xs[2], ys[5], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[2], ys[5], xs[4], ys[5], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[4], ys[5], xs[5], ys[5], r, g, b);
+}
+////////////////////
+void raideM(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+      int xs[] = {x, x+p/6, x+2*p/6, x+3*p/6, x+4*p/6, x+5*p/6, x+p};
+      int ys[] = {y, y-a/4, y-a/2, y-3*a/4, y-a};
+      
+      trikampis(pav, xs[0],ys[0], xs[0],ys[2], xs[1],ys[0], r,g,b);
+      trikampis(pav, xs[1],ys[0], xs[0],ys[2], xs[1],ys[2], r,g,b);           
+      trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[2],ys[3], r,g,b);           
+      trikampis(pav, xs[0],ys[2], xs[2],ys[3], xs[2],ys[4], r,g,b);        
+      trikampis(pav, xs[2],ys[3], xs[2],ys[4], xs[3],ys[1], r,g,b);          
+      trikampis(pav, xs[2],ys[4], xs[3],ys[1], xs[3],ys[2], r,g,b);
+      trikampis(pav, xs[3],ys[1], xs[3],ys[2], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[3],ys[1], xs[4],ys[3], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[4],ys[3], xs[4],ys[4], xs[5],ys[2], r,g,b);
+      trikampis(pav, xs[5],ys[2], xs[6],ys[2], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[5],ys[2], xs[6],ys[2], xs[5],ys[0], r,g,b);
+      trikampis(pav, xs[6],ys[0], xs[5],ys[0], xs[6],ys[2], r,g,b);
+      trikampis(pav, xs[1],ys[0], xs[2],ys[0], xs[1],ys[1], r,g,b);
+      trikampis(pav, xs[4],ys[0], xs[5],ys[0], xs[5],ys[1], r,g,b);
+
+}
+///////////////////
+void raideN(struct PPM6* pav,  int x, int y,                    // k.v. kampas
+                 int p, int a, uint8_t r, uint8_t g, uint8_t b){
+
+
+
+      int xs[] = {x, x+p/5, x+p*2/5, x+p*3/5, x+p*4/5, x+p};
+    int ys[] = {y, y+a/4, y+2*a/4, y+3*a/4, y+a};
+
+    trikampis(pav, xs[0], ys[4], xs[1], ys[4], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[1], ys[0], xs[2], ys[0], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[2], ys[4], xs[2], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[1], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[3], ys[4], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[0], xs[4], ys[0], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[4], xs[4], ys[4], xs[4], ys[0], r, g, b);
+    trikampis(pav, xs[4], ys[0], xs[1], ys[4], xs[5], ys[0], r, g, b);
+
+}
+/////////////////
+void raideO(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/4, y+a*2/4, y+a*3/4, y+a};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[1], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[1], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[1], xs[3],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[2], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[3],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[3], xs[3],ys[3], xs[2],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[1],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[2],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[4], xs[0],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[3], xs[1],ys[3], xs[0],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[3], r,g,b);
+ 
+}
+//////////////////
+void raideP(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/4, x+p*2/4, x+p*3/4, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[5], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[1], xs[3], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[0], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[1], xs[4], ys[2], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[2], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[3], ys[2], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[2], xs[2], ys[3], xs[3], ys[3], r, g, b);
+}
+////////////////////////
+void raideQ(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p, p*1.5+x/3};
+       int ys[] = {y, y+a/4, y+a*2/4, y+a*3/4, y+a, 2.5*a+y/3};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[1], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[1], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[1], xs[3],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[2], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[3],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[3], xs[3],ys[3], xs[2],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[1],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[2],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[4], xs[0],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[3], xs[1],ys[3], xs[0],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[3], r,g,b);
+       atkarpa(pav, xs[4], ys[5], xs[3], ys[4], 0,0,0);
+
+}
+/////////////////
+void raideR(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/4, x+p*2/4, x+p*3/4, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[0], ys[0], xs[1], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[5], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[1], xs[3], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[0], xs[4], ys[1], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[1], xs[4], ys[2], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[2], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[3], ys[2], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[2], xs[2], ys[3], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[3], ys[5], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[5], xs[4], ys[5], xs[4], ys[4], r, g, b);
+
+}
+/////////////////
+void raideS(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/8, x+p*2/8, x+p*3/8, x+p*4/8, x+p*5/8, x+p*6/8, x+p*7/8, x+p};
+    int ys[] = {y, y+a/5, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[0], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[1], xs[0], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[2], ys[2], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[1], ys[1], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[0], ys[2], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[0], ys[2], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[0], ys[2], xs[1], ys[2], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[0], ys[2], xs[2], ys[4], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[4], xs[3], ys[4], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[3], ys[4], xs[2], ys[6], xs[3], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[2], ys[5], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[1], ys[6], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[0], ys[5], xs[1], ys[4], xs[1], ys[6], r, g, b);
+
+}
+///////////////////////
+void raideT(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x,x+p/7, x+p*2/7, x+p*3/7, x+p*4/7,x+p*5/7, x+p*6/7, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a}; 
+
+    trikampis(pav, xs[0], ys[0], xs[2], ys[1], xs[5], ys[0], r, g, b);
+    trikampis(pav, xs[5], ys[0], xs[2], ys[1], xs[7], ys[1], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[4], ys[1], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[1], xs[3], ys[4], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[5], xs[3], ys[4], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[2], ys[5], xs[5], ys[5], r, g, b);
+}
+//////////////////
+void raideU(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/4, y+a*2/4, y+a*3/4, y+a};
+
+       trikampis(pav, xs[0],ys[0], xs[1],ys[1], xs[0],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[1], xs[0],ys[3], xs[1],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[2],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[2],ys[4], xs[3],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[3], xs[3],ys[0], r,g,b);
+ 
+
+}
+//////////////////
+void raideV(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/5, x+p*2/5, x+p*3/5, x+p*4/5, x+p};
+       int ys[] = {y, y+a/6, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+
+       trikampis(pav, xs[0],ys[0], xs[1],ys[1], xs[0],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[1], xs[1],ys[4], xs[2],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[3],ys[4], xs[2],ys[6], r,g,b);
+       trikampis(pav, xs[2],ys[6], xs[3],ys[6], xs[3],ys[4], r,g,b);
+       trikampis(pav, xs[3],ys[4], xs[3],ys[6], xs[4],ys[4], r,g,b);
+       trikampis(pav, xs[3],ys[4], xs[4],ys[4], xs[4],ys[1], r,g,b);
+       trikampis(pav, xs[4],ys[4], xs[4],ys[1], xs[5],ys[1], r,g,b);
+       trikampis(pav, xs[4],ys[1], xs[5],ys[1], xs[5],ys[0], r,g,b);
+}
+////////////////////////
+void raideW(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/6, x+2*p/6, x+3*p/6, x+4*p/6, x+5*p/6, x+p};
+    int ys[] = {y, y+a/4, y+a/2, y+3*a/4, y+a};
+      
+      trikampis(pav, xs[0],ys[0], xs[0],ys[2], xs[1],ys[0], r,g,b);
+      trikampis(pav, xs[1],ys[0], xs[0],ys[2], xs[1],ys[2], r,g,b);           
+      trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[2],ys[3], r,g,b);           
+      trikampis(pav, xs[0],ys[2], xs[2],ys[3], xs[2],ys[4], r,g,b);        
+      trikampis(pav, xs[2],ys[3], xs[2],ys[4], xs[3],ys[1], r,g,b);          
+      trikampis(pav, xs[2],ys[4], xs[3],ys[1], xs[3],ys[2], r,g,b);
+      trikampis(pav, xs[3],ys[1], xs[3],ys[2], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[3],ys[1], xs[4],ys[3], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[4],ys[3], xs[4],ys[4], xs[5],ys[2], r,g,b);
+      trikampis(pav, xs[5],ys[2], xs[6],ys[2], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[5],ys[2], xs[6],ys[2], xs[5],ys[0], r,g,b);
+      trikampis(pav, xs[6],ys[0], xs[5],ys[0], xs[6],ys[2], r,g,b);
+      trikampis(pav, xs[1],ys[0], xs[2],ys[0], xs[1],ys[1], r,g,b);
+      trikampis(pav, xs[4],ys[0], xs[5],ys[0], xs[5],ys[1], r,g,b);
+
+}
+///////////////////
+void raideX(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+    
+    int xs[] = {x, x+p/8, x+p*2/8, x+p*3/8, x+p*4/8, x+p*5/8, x+p*6/8, x+p*7/8, x+p};
+    int ys[] = {y, y+a/5, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+
+    trikampis(pav, xs[0], ys[0], xs[2], ys[0], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[0], xs[3], ys[3], xs[4], ys[2], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[4], ys[2], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[2], xs[4], ys[4], xs[5], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[0], ys[6], xs[2], ys[6], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[2], ys[6], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[4], ys[2], xs[5], ys[3], xs[6], ys[0], r, g, b);
+    trikampis(pav, xs[6], ys[0], xs[8], ys[0], xs[5], ys[3], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[5], ys[3], xs[8], ys[6], r, g, b);
+    trikampis(pav, xs[4], ys[4], xs[8], ys[6], xs[6], ys[6], r, g, b);
+
+}
+///////////////////
+void raideY(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/4, x+p*2/4,x+p*3/4, x+p};
+       int ys[] = {y, y+a/5, y+a*2/5, y+a*3/5, y+a};
+
+       trikampis(pav, xs[0],ys[0], xs[1],ys[0], xs[0],ys[2], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[0],ys[2], xs[1],ys[2], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[1], xs[1],ys[4], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[1],ys[4], xs[3],ys[4], r,g,b);
+       trikampis(pav, xs[3],ys[4], xs[2],ys[2], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[4],ys[2], xs[3],ys[3], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[4],ys[2], xs[4],ys[0], r,g,b);
+       trikampis(pav, xs[4],ys[0], xs[3],ys[2], xs[3],ys[0], r,g,b);
+
+}
+////////////////////
+void raideZ(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p, x+p*3/4, x+p/4};
+    int ys[] = {y, y+a/5, y+a*4/5, y+a, y+a*2/5, y+a*3/5};
+
+    trikampis(pav, xs[0],ys[0], xs[1],ys[0], xs[0],ys[1], r,g,b);
+   	trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+    trikampis(pav, xs[1],ys[1], xs[2],ys[1], xs[3],ys[2], r,g,b);
+	trikampis(pav, xs[2],ys[1], xs[0],ys[2], xs[3],ys[2], r,g,b);
+    trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[0],ys[3], r,g,b);
+    trikampis(pav, xs[0],ys[3], xs[1],ys[2], xs[1],ys[3], r,g,b);
+    trikampis(pav, xs[0],ys[1], xs[0],ys[4], xs[3],ys[1], r,g,b);
+    trikampis(pav, xs[1],ys[2], xs[1],ys[5], xs[2],ys[2], r,g,b);
+}
+////////////////////
+void skaicius0(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/4, y+a*2/4, y+a*3/4, y+a};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[1], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[1], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[1], xs[3],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[2], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[3],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[3], xs[3],ys[3], xs[2],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[1],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[2],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[4], xs[0],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[3], xs[1],ys[3], xs[0],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[3], r,g,b);
+       atkarpa(pav, xs[1], ys[3], xs[2], ys[1], r,g,b);
+
+}
+/////////////////
+void skaicius1(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/5,y+a*4/5, y+a};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[2], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[1],ys[2], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[3],ys[2], xs[0],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[3], xs[3],ys[3], xs[3],ys[2], r,g,b);
+ 
+}
+//////////////////////
+void skaicius2(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/4, x+p*2/4, x+p*3/4, x+p};
+    int ys[] = {y, y+a/4, y+2*a/4, y+3*a/4, y+a};
+
+    trikampis(pav, xs[0], ys[1], xs[1], ys[0], xs[2], ys[0], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[2], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[1], xs[3], ys[2], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[2], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[1], ys[3], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[0], ys[4], xs[1], ys[3], xs[4], ys[3], r, g, b);
+    trikampis(pav, xs[0], ys[4], xs[4], ys[3], xs[3], ys[4], r, g, b);
+
+}
+////////////////////
+void skaicius3(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/4, x+a/2, x+3*p/4, x+p};
+    int ys[] = {y, y+a/6, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+      
+      trikampis(pav, xs[0],ys[0], xs[2],ys[0], xs[0],ys[1], r,g,b);
+      trikampis(pav, xs[0],ys[1], xs[2],ys[0], xs[2],ys[1], r,g,b);           
+      trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[2], r,g,b);           
+      trikampis(pav, xs[2],ys[0], xs[3],ys[2], xs[4],ys[2], r,g,b);          
+      trikampis(pav, xs[3],ys[2], xs[4],ys[2], xs[1],ys[3], r,g,b);          
+      trikampis(pav, xs[4],ys[2], xs[1],ys[3], xs[2],ys[3], r,g,b);
+      trikampis(pav, xs[1],ys[3], xs[2],ys[3], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[1],ys[3], xs[3],ys[4], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[3],ys[4], xs[4],ys[4], xs[2],ys[5], r,g,b);
+      trikampis(pav, xs[2],ys[5], xs[2],ys[6], xs[4],ys[4], r,g,b);
+      trikampis(pav, xs[2],ys[5], xs[2],ys[6], xs[0],ys[5], r,g,b);
+      trikampis(pav, xs[0],ys[6], xs[0],ys[5], xs[2],ys[6], r,g,b);
+ 
+
+}
+////////////////
+void skaicius4(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/6, y+2*a/6, y+3*a/6, y+4*a/6, y+5*a/6, y+a};
+
+    trikampis(pav, xs[0], ys[1], xs[1], ys[0], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[0], ys[3], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[0], ys[3], xs[1], ys[4], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[2], ys[3], xs[3], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[3], ys[3], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[4], xs[3], ys[4], xs[2], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[5], xs[3], ys[4], xs[3], ys[6], r, g, b);
+
+}
+////////////////////
+void skaicius5(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[0], ys[0], xs[4], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[0], xs[3], ys[1], xs[0], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[1], ys[1], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[2], ys[2], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[3], ys[2], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[3], ys[2], xs[4], ys[3], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[4], ys[3], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[3], xs[3], ys[5], xs[4], ys[4], r, g, b);
+    trikampis(pav, xs[3], ys[4], xs[3], ys[5], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[3], ys[4], xs[1], ys[5], xs[0], ys[4], r, g, b);
+    trikampis(pav, xs[0], ys[4], xs[1], ys[3], xs[1], ys[4], r, g, b);
+
+}
+////////////////
+void skaicius6(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/5, y+2*a/5, y+3*a/5, y+4*a/5, y+a};
+
+    trikampis(pav, xs[0], ys[1], xs[1], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[0], xs[2], ys[0], xs[3], ys[1], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[1], ys[1], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[0], ys[1], xs[0], ys[4], xs[1], ys[5], r, g, b);
+    trikampis(pav, xs[1], ys[4], xs[1], ys[5], xs[2], ys[4], r, g, b);
+    trikampis(pav, xs[1], ys[5], xs[2], ys[4], xs[2], ys[5], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[2], ys[5], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[2], ys[3], xs[3], ys[3], xs[3], ys[4], r, g, b);
+    trikampis(pav, xs[1], ys[3], xs[3], ys[3], xs[2], ys[2], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[1], ys[2], xs[1], ys[3], r, g, b);
+
+}
+////////////////////////
+void skaicius7(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+  
+    int xs[] = {x, x+p/3, x+p*2/3, x+p};
+    int ys[] = {y, y+a/4, y+2*a/4, y+3*a/4, y+a};
+
+    trikampis(pav, xs[0], ys[0], xs[3], ys[0], xs[1], ys[1], r, g, b);
+    trikampis(pav, xs[1], ys[1], xs[3], ys[1], xs[3], ys[0], r, g, b);
+    trikampis(pav, xs[2], ys[1], xs[3], ys[1], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[3], ys[1], xs[2], ys[2], xs[1], ys[2], r, g, b);
+    trikampis(pav, xs[1], ys[2], xs[2], ys[2], xs[1], ys[3], r, g, b);
+    trikampis(pav, xs[2], ys[2], xs[1], ys[3], xs[2], ys[3], r, g, b);
+    trikampis(pav, xs[1], ys[3], xs[2], ys[3], xs[1], ys[4], r, g, b);
+
+}
+/////////////////
+void skaicius8(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/6, y+a*2/6, y+a*3/6, y+a*4/6, y+a*5/6, y+a};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[1], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[1], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[1], xs[3],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[2], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[2],ys[3], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[2], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[1],ys[2], xs[0],ys[2], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[0],ys[1], xs[1],ys[1], r,g,b);
+
+       trikampis(pav, xs[0],ys[4], xs[1],ys[4], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[1],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[2],ys[4], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[3], xs[2],ys[4], xs[3],ys[4], r,g,b);
+       trikampis(pav, xs[2],ys[4], xs[3],ys[4], xs[2],ys[5], r,g,b);
+       trikampis(pav, xs[2],ys[5], xs[3],ys[5], xs[3],ys[4], r,g,b);
+       trikampis(pav, xs[2],ys[5], xs[2],ys[6], xs[3],ys[5], r,g,b);
+       trikampis(pav, xs[2],ys[5], xs[2],ys[6], xs[1],ys[6], r,g,b);
+       trikampis(pav, xs[1],ys[5], xs[1],ys[6], xs[2],ys[5], r,g,b);
+       trikampis(pav, xs[1],ys[5], xs[1],ys[6], xs[0],ys[5], r,g,b);
+       trikampis(pav, xs[0],ys[5], xs[1],ys[5], xs[1],ys[4], r,g,b);
+       trikampis(pav, xs[1],ys[4], xs[0],ys[4], xs[0],ys[5], r,g,b);
+
+}
+/////////////////
+void skaicius9(struct PPM6* pav, int x, int y, int p, int a, uint8_t r, uint8_t g, uint8_t b){
+	
+	int xs[] = {x, x+p/3, x+p*2/3, x+p};
+       int ys[] = {y, y+a/6, y+a*2/6, y+a*3/6, y+a*4/6, y+a*5/6, y+a};
+
+       trikampis(pav, xs[0],ys[1], xs[1],ys[1], xs[1],ys[0], r,g,b);
+       trikampis(pav, xs[1],ys[0], xs[1],ys[1], xs[2],ys[0], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[0], xs[2],ys[1], xs[3],ys[1], r,g,b);
+       trikampis(pav, xs[2],ys[1], xs[3],ys[1], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[1], xs[3],ys[2], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[3],ys[2], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[2], xs[2],ys[3], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[1],ys[3], xs[1],ys[2], xs[2],ys[2], r,g,b);
+       trikampis(pav, xs[1],ys[2], xs[0],ys[2], xs[1],ys[3], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[1],ys[2], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[0],ys[2], xs[0],ys[1], xs[1],ys[1], r,g,b);
+       trikampis(pav, xs[3],ys[2], xs[3],ys[3], xs[2],ys[3], r,g,b);
+       trikampis(pav, xs[2],ys[3], xs[3],ys[3], xs[2],ys[5], r,g,b);
+       trikampis(pav, xs[3],ys[3], xs[2],ys[5], xs[3],ys[4], r,g,b);
+       trikampis(pav, xs[0],ys[4], xs[2],ys[4], xs[2],ys[5], r,g,b);
+       trikampis(pav, xs[2],ys[5], xs[1],ys[5], xs[0],ys[4], r,g,b);
+
+}
+/////////////////////
